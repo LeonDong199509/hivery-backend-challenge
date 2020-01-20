@@ -24,7 +24,7 @@ SECRET_KEY = '1!k-p^y-orx=$en6u(thow#zwio3ci+1arlrv-m7bksj5+=1z&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
