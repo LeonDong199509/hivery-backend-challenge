@@ -1,12 +1,10 @@
 # hivery-backend-challenge
 
 # developing enviroment
-# main dependecy 
 python3.8
 django-2.2.9,
 djongo-1.3.0 
 djangorestframework-3.11.0.
-# database 
 MongoDB 4.2.2
 
 
