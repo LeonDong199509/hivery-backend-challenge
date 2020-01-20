@@ -1,0 +1,13 @@
+# virtual env
+env
+
+#python cache
+__pycache__
+
+#vscode
+.vscode
+
+#others
+resources
+hivery_backend/paranuara_challenge/models.pyc
+hivery_backend/paranuara_challenge/migrations/0001_initial.py
