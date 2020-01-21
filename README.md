@@ -31,12 +31,12 @@ MongoDB 4.2.2
     3. python manage.py migrate
 7. import json files to mongodb 
     (go back to your terminal)
-    If your database is non-authenticated:
-    1. mongoimport --db paranuara --collection companies --type json --file <the companies.json file path> --jsonArray
-    2. mongoimport --db paranuara --collection people --type json --file <the people.json file path> --jsonArray
-    If your database is authenticated:
-    1. mongoimport --db paranuara --collection companies --type json --file <the companies.json file path> --jsonArray --authenticationDatabase admin --username "yourAdminname" --password "yourpassword"
-    2. mongoimport --db paranuara --collection people --type json --file <the people.json file path> --jsonArray --authenticationDatabase admin --username "yourAdminname" --password "yourpassword"
+    1. If your database is non-authenticated:
+        1. mongoimport --db paranuara --collection companies --type json --file <the companies.json file path> --jsonArray
+        2. mongoimport --db paranuara --collection people --type json --file <the people.json file path> --jsonArray
+    2. If your database is authenticated:
+        1. mongoimport --db paranuara --collection companies --type json --file <the companies.json file path> --jsonArray --authenticationDatabase admin --username "yourAdminname" --password "yourpassword"
+        2. mongoimport --db paranuara --collection people --type json --file <the people.json file path> --jsonArray --authenticationDatabase admin --username "yourAdminname" --password "yourpassword"
 8. start django
     1. python manage.py runserver
 
