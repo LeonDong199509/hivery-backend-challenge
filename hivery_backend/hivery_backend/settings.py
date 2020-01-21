@@ -78,7 +78,11 @@ WSGI_APPLICATION = 'hivery_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME' : 'paranuara'
+        'NAME' : 'paranuara',
+        'HOST': '127.0.0.1',
+        'PORT': 27017,
+        # 'USER': 'YourUserName',
+        # 'PASSWORD': 'YourPassWord',
     }
 }
 
@@ -122,3 +126,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
+

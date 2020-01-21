@@ -44,7 +44,7 @@ class CommonFriendView(generics.GenericAPIView):
     serializer_class = CommonFriendSeializer
     def post(self,request):
         '''
-            Get common friends of 2 people
+            Get 2 people's common friends who have brown eye and not died
             person1 -- the index of the first person
             person2 -- the index of the second person
         '''
@@ -56,11 +56,11 @@ class CommonFriendView(generics.GenericAPIView):
         try:
             person1_obj = Person.objects.get(index=person1)
         except:
-            return Response({'error': "person1 not exist"}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'not found': "person1 not exist"}, status=status.HTTP_404_NOT_FOUND)
         try:
             person2_obj = Person.objects.get(index=person2)
         except:
-            return Response({'error': "person2 not exist"}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'not found': "person2 not exist"}, status=status.HTTP_404_NOT_FOUND)
         common_friend = find_common(clean_friends(person1_obj.friends),clean_friends(person2_obj.friends))
         conditioned_friend = find_friends(common_friend) 
         person1_info = {
@@ -92,7 +92,7 @@ class FruitVegView(APIView):
         try:
             person_obj = Person.objects.get(index=int(index))
         except:
-            return Response({'error': "person not exist"}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'not found': "person not exist"}, status=status.HTTP_404_NOT_FOUND)
         fruits,vegs = split_fruit_veg(person_obj.favouriteFood)
         data= {
             'username' : person_obj.name,
